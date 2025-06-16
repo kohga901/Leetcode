@@ -9,19 +9,18 @@ class Solution(object):
         """
         if numRows == 1 or numRows >= len(s):
             return s
-
-        L = [''] * numRows
-        index, step = 0, 1
-
-        for x in s:
-            L[index] += x
+        array = [''] * numRows
+        index = 0
+        step = 1
+        for char in s:
+            array[index] += char
             if index == 0:
                 step = 1
-            elif index == numRows -1:
+            elif index == numRows - 1:
                 step = -1
             index += step
-
-        return ''.join(L)
+        return ''.join(array)
+                
     
 class tests_EVER(unittest.TestCase):
     global sol

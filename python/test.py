@@ -1,3 +1,3 @@
-L = ['a', 'b', 'c']
-L[1] = 'd'
-print(L)
+L = ['a'] * 5
+
+print(''.join(L))
